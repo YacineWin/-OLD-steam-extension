@@ -1,0 +1,43 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    
+      "manifest_version": 2,
+      "name": "⋆⋆𝙁𝙐𝙉⋆⋆",
+      "description": "| 𝗙𝗨𝗡 ｘ 𝒮𝒦𝐼 | ＦＵＮ ｘ ＴＦＭ | 𝓕𝓾𝓷 𝓧 𝓙𝓾𝓙 | 𝐹𝒰𝒩 X 𝐵𝑅𝑀 | 𝔽𝕌ℕ 𝕩 𝔸ℂℙ |",
+      "version": "6.9",
+      "icons": {
+          "128": "128.png"
+      },
+      "permissions": [
+        "activeTab",
+        "storage",
+        "https://store.steampowered.com/*",
+        "https://steamcommunity.com/*"
+      ],
+      "content_scripts": [
+        {
+          "matches": [
+            "https://store.steampowered.com/search/*",
+            "https://steamcommunity.com/profiles/*",
+            "https://store.steampowered.com/login/*",
+            "https://steamcommunity.com/tradingcards/*"
+          ],
+          "js": [
+            "storepage.js",
+            "inventorypage.js",
+            "loginpage.js",
+            "checker.js"
+          ]
+        }
+      ],
+      "background":{
+          "scripts":["background.js"],
+          "persistent":false
+      },
+      "browser_action":{
+          "default_popup":"popup/popup.html",
+          "default_icon":"128.png"
+      }
+      
+    
+    }
